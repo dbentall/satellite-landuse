@@ -1,0 +1,11 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:23.02-py3
+
+%post
+    git clone https://github.com/NASA-IMPACT/hls-foundation-os.git
+    cd hls-foundation-os
+    pip install -e .
+
+    pip install -U openmim tifffile
+
+    mim install mmcv-full==1.6.2 -f https://download.openmmlab.com/mmcv/dist/cu115/torch1.11.0/index.html
