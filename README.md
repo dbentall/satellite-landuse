@@ -12,7 +12,9 @@ running the model locally.
 ## Downloading imagery
 
 ``` sh
+python download_images.py coords.json
 ```
+`coords.json` is a mandatory positional argument. It should be a JSON document where each key represents a location name, and its corresponding value is a list of latitude/longitude pairs that define the desired polygon for that location.
 
 ## Pre-processing imagery
 
